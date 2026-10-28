@@ -1,0 +1,10 @@
+WARN  box "shoppers" is only 120 wide — canonical boxes are 200+ (usually 280–400); widen it and let its text breathe
+WARN  edge shoppers → storefront: segment 1 is diagonal (370,332 → 380,494) — the style uses orthogonal routing
+ERROR box "catalog" references unknown plane "nope"
+ERROR boxes "shoppers" and "merchants" overlap
+ERROR box "shoppers" text "web storefront · mobile apps" overflows the box by ~89px — widen the box, shorten the text, or split the line
+ERROR box "shoppers" text "browse · search · buy" overflows the box by ~43px — widen the box, shorten the text, or split the line
+ERROR box "merchants" text "run their stores from the dashboard" overflows the box by ~105px — widen the box, shorten the text, or split the line
+ERROR box "merchants" text "catalog · orders · promotions" overflows the box by ~65px — widen the box, shorten the text, or split the line
+
+5 bands · 20 boxes · 20 edges · 6 errors · 2 warnings

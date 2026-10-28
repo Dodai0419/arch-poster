@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="900" viewBox="0 0 1480 900">
+<style>text{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',monospace}.title{font-size:28px;font-weight:700}.sub{font-size:14px;font-weight:400}.tag{font-size:13px;font-weight:400}.hdr{font-size:11px;font-weight:700;letter-spacing:2.5px}.tagr{font-size:10px;font-weight:400;letter-spacing:2px}.plane{font-size:9.5px;font-weight:700;letter-spacing:2px}.bl{font-size:13.5px;font-weight:600}.bs{font-size:11px;font-weight:400}.bn{font-size:10.5px;font-weight:400;font-style:italic}.al{font-size:10.5px;font-weight:400}.legend{font-size:11px;font-weight:400}</style>
+<rect width="1480" height="900" fill="#0E1217"/>
+<rect x="160" y="200" width="1260" height="150" rx="14" fill="rgb(255,255,255)" fill-opacity="0.02" stroke="#94A3B8" stroke-width="1.5" stroke-opacity="0.55"/>
+<text class="hdr" x="184" y="230" fill="#94A3B8">INPUT — ONE SCENE FILE</text>
+<rect x="160" y="420" width="1260" height="170" rx="14" fill="rgb(255,255,255)" fill-opacity="0.02" stroke="#A78BFA" stroke-width="1.5" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="hdr" x="184" y="450" fill="#A78BFA">ARCH_POSTER.JS — ONE NODE PROCESS, NO DEPENDENCIES</text>
+<text class="tagr" x="1396" y="450" fill="#A78BFA" text-anchor="end" opacity="0.6">OURS</text>
+<rect x="160" y="660" width="1260" height="150" rx="14" fill="rgb(255,255,255)" fill-opacity="0.02" stroke="#4ADE80" stroke-width="1.5" stroke-opacity="0.45"/>
+<text class="hdr" x="184" y="690" fill="#4ADE80">OUTPUT — WRITTEN TO --out</text>
+<text class="title" x="160" y="86" fill="#E7EAEE">arch-poster — how it works</text>
+<text class="sub" x="160" y="118" fill="#9AA4B2">scene → validate → canvas + posters, in one command</text>
+<text class="tag" x="160" y="146" fill="#6E7A88"><tspan fill="#94A3B8">scene.js</tspan><tspan fill="#4A5462"> → </tspan><tspan fill="#A78BFA">arch_poster.js</tspan><tspan fill="#4A5462"> → </tspan><tspan fill="#4ADE80">html + svg</tspan></text>
+<text class="legend" x="1082" y="86" fill="#9AA4B2">dashed — code we own</text>
+<text class="legend" x="1082" y="110" fill="#9AA4B2">solid — inputs and files</text>
+<text class="legend" x="1100" y="134" fill="#9AA4B2">colour — the stage</text>
+<text class="bn" x="160" y="846" fill="#6E7A88">any validation error stops before anything is written</text>
+<rect x="1046" y="75" width="26" height="13" rx="3" fill="none" stroke="#8B93A1" stroke-width="1.25" stroke-opacity="0.8" stroke-dasharray="6 5"/>
+<rect x="1046" y="99" width="26" height="13" rx="3" fill="#161B23" stroke="#2A3240" stroke-width="1.25"/>
+<rect x="1046" y="123" width="9" height="13" rx="2.5" fill="#94A3B8" fill-opacity="0.85"/>
+<rect x="1059" y="123" width="9" height="13" rx="2.5" fill="#A78BFA" fill-opacity="0.85"/>
+<rect x="1072" y="123" width="9" height="13" rx="2.5" fill="#4ADE80" fill-opacity="0.85"/>
+<path d="M762 292 L794 292" fill="none" stroke="#8B93A1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="794,292 784.5,287.8 784.5,296.2" fill="#8B93A1"/>
+<path d="M1090 334 L1090 414" fill="none" stroke="#8B93A1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1090,414 1094.2,404.5 1085.8,404.5" fill="#8B93A1"/>
+<path d="M562 524 L594 524" fill="none" stroke="#8B93A1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="594,524 584.5,519.8 584.5,528.2" fill="#8B93A1"/>
+<path d="M962 524 L994 524" fill="none" stroke="#8B93A1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="994,524 984.5,519.8 984.5,528.2" fill="#8B93A1"/>
+<path d="M780 570 L780 631 Q780 640 771 640 L489 640 Q480 640 480 649 L480 706" fill="none" stroke="#8B93A1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="480,706 484.2,696.5 475.8,696.5" fill="#8B93A1"/>
+<path d="M1190 570 L1190 706" fill="none" stroke="#8B93A1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1190,706 1194.2,696.5 1185.8,696.5" fill="#8B93A1"/>
+<rect x="200" y="252" width="560" height="80" rx="10" fill="#161B23"/>
+<rect x="200" y="252" width="560" height="80" rx="10" fill="#94A3B8" fill-opacity="0.05"/>
+<rect x="200" y="252" width="560" height="80" rx="10" fill="none" stroke="#2A3240" stroke-width="1.25"/>
+<rect x="200" y="252" width="560" height="80" rx="10" fill="none" stroke="#94A3B8" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="224" y="280" fill="#E7EAEE">Claude Code / Codex / you</text>
+<text class="bs" x="224" y="302" fill="#9AA4B2">reads the codebase, writes planes · bands · boxes</text>
+<text class="bs" x="224" y="318" fill="#9AA4B2">no viewer code, only data</text>
+<rect x="800" y="252" width="580" height="80" rx="10" fill="#161B23"/>
+<rect x="800" y="252" width="580" height="80" rx="10" fill="#94A3B8" fill-opacity="0.05"/>
+<rect x="800" y="252" width="580" height="80" rx="10" fill="none" stroke="#2A3240" stroke-width="1.25"/>
+<rect x="800" y="252" width="580" height="80" rx="10" fill="none" stroke="#94A3B8" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="824" y="280" fill="#E7EAEE">scene.js</text>
+<text class="bs" x="824" y="302" fill="#9AA4B2">W · H · PLANES · BANDS · BOXES · EDGES</text>
+<text class="bs" x="824" y="318" fill="#9AA4B2">TEXTS · SWATCHES · CHIPS</text>
+<rect x="200" y="480" width="360" height="88" rx="10" fill="#161B23"/>
+<rect x="200" y="480" width="360" height="88" rx="10" fill="#A78BFA" fill-opacity="0.05"/>
+<rect x="200" y="480" width="360" height="88" rx="10" fill="none" stroke="#A78BFA" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="224" y="508" fill="#E7EAEE">validate</text>
+<text class="bs" x="224" y="530" fill="#9AA4B2">ids · overlaps · text overflow</text>
+<text class="bs" x="224" y="546" fill="#9AA4B2">orthogonal edges · world bounds</text>
+<rect x="600" y="480" width="360" height="88" rx="10" fill="#161B23"/>
+<rect x="600" y="480" width="360" height="88" rx="10" fill="#A78BFA" fill-opacity="0.05"/>
+<rect x="600" y="480" width="360" height="88" rx="10" fill="none" stroke="#A78BFA" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="624" y="508" fill="#E7EAEE">build canvas</text>
+<text class="bs" x="624" y="530" fill="#9AA4B2">template + scene → index.html</text>
+<text class="bs" x="624" y="546" fill="#9AA4B2">same bytes as upstream build.js</text>
+<rect x="1000" y="480" width="380" height="88" rx="10" fill="#161B23"/>
+<rect x="1000" y="480" width="380" height="88" rx="10" fill="#A78BFA" fill-opacity="0.05"/>
+<rect x="1000" y="480" width="380" height="88" rx="10" fill="none" stroke="#A78BFA" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="1024" y="508" fill="#E7EAEE">export SVG</text>
+<text class="bs" x="1024" y="530" fill="#9AA4B2">canvas paint order, as vectors</text>
+<text class="bs" x="1024" y="546" fill="#9AA4B2">dark + light palette</text>
+<rect x="200" y="712" width="560" height="80" rx="10" fill="#161B23"/>
+<rect x="200" y="712" width="560" height="80" rx="10" fill="#4ADE80" fill-opacity="0.05"/>
+<rect x="200" y="712" width="560" height="80" rx="10" fill="none" stroke="#2A3240" stroke-width="1.25"/>
+<rect x="200" y="712" width="560" height="80" rx="10" fill="none" stroke="#4ADE80" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="224" y="740" fill="#E7EAEE">index.html</text>
+<text class="bs" x="224" y="762" fill="#9AA4B2">interactive canvas: pan · zoom · focus</text>
+<text class="bs" x="224" y="778" fill="#9AA4B2">share it or publish it</text>
+<rect x="800" y="712" width="580" height="80" rx="10" fill="#161B23"/>
+<rect x="800" y="712" width="580" height="80" rx="10" fill="#4ADE80" fill-opacity="0.05"/>
+<rect x="800" y="712" width="580" height="80" rx="10" fill="none" stroke="#2A3240" stroke-width="1.25"/>
+<rect x="800" y="712" width="580" height="80" rx="10" fill="none" stroke="#4ADE80" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="824" y="740" fill="#E7EAEE">&lt;slug&gt;.svg + &lt;slug&gt;-light.svg</text>
+<text class="bs" x="824" y="762" fill="#9AA4B2">drop into README.md with &lt;picture&gt;</text>
+<text class="bs" x="824" y="778" fill="#9AA4B2">GitHub renders them inline</text>
+<text class="al" x="1104" y="384" fill="#98A2B0">evaluate once</text>
+</svg>

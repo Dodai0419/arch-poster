@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="960" viewBox="0 0 1480 960">
+<style>text{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',monospace}.title{font-size:28px;font-weight:700}.sub{font-size:14px;font-weight:400}.tag{font-size:13px;font-weight:400}.hdr{font-size:11px;font-weight:700;letter-spacing:2.5px}.tagr{font-size:10px;font-weight:400;letter-spacing:2px}.plane{font-size:9.5px;font-weight:700;letter-spacing:2px}.bl{font-size:13.5px;font-weight:600}.bs{font-size:11px;font-weight:400}.bn{font-size:10.5px;font-weight:400;font-style:italic}.al{font-size:10.5px;font-weight:400}.legend{font-size:11px;font-weight:400}</style>
+<rect width="1480" height="960" fill="#F4F5F7"/>
+<rect x="160" y="200" width="1260" height="150" rx="14" fill="rgb(15,23,42)" fill-opacity="0.03" stroke="#0284C7" stroke-width="1.5" stroke-opacity="0.45" stroke-dasharray="6 5"/>
+<text class="hdr" x="184" y="230" fill="#0284C7">APP — WEB CHAT · SLACK BOT</text>
+<text class="tagr" x="1396" y="230" fill="#0284C7" text-anchor="end" opacity="0.6">OURS — WHAT USERS TOUCH</text>
+<rect x="160" y="420" width="1260" height="170" rx="14" fill="rgb(15,23,42)" fill-opacity="0.03" stroke="#7C3AED" stroke-width="1.5" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="hdr" x="184" y="450" fill="#7C3AED">RETRIEVAL PIPELINE</text>
+<text class="tagr" x="1396" y="450" fill="#7C3AED" text-anchor="end" opacity="0.6">OURS — THE ANSWER QUALITY</text>
+<rect x="160" y="660" width="1260" height="170" rx="14" fill="rgb(15,23,42)" fill-opacity="0.03" stroke="#C2560A" stroke-width="1.5" stroke-opacity="0.4"/>
+<text class="hdr" x="184" y="690" fill="#C2560A">INFRASTRUCTURE</text>
+<text class="tagr" x="1396" y="690" fill="#C2560A" text-anchor="end" opacity="0.6">SWAPPABLE</text>
+<text class="title" x="160" y="86" fill="#0F172A">Docs bot — RAG architecture</text>
+<text class="sub" x="160" y="118" fill="#475569">ask → route → retrieve → answer → learn</text>
+<text class="legend" x="1082" y="86" fill="#475569">dashed — an abstraction we own</text>
+<text class="legend" x="1082" y="110" fill="#475569">solid — swappable infra</text>
+<text class="legend" x="1110" y="134" fill="#475569">colour — the plane</text>
+<text class="bn" x="160" y="906" fill="#6B7280">votes in the eval logs decide the next reranker change</text>
+<rect x="1046" y="75" width="26" height="13" rx="3" fill="none" stroke="#737C8B" stroke-width="1.25" stroke-opacity="0.8" stroke-dasharray="6 5"/>
+<rect x="1046" y="99" width="26" height="13" rx="3" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="1046" y="123" width="9" height="13" rx="2.5" fill="#0284C7" fill-opacity="0.85"/>
+<rect x="1059" y="123" width="9" height="13" rx="2.5" fill="#7C3AED" fill-opacity="0.85"/>
+<rect x="1072" y="123" width="9" height="13" rx="2.5" fill="#E11D48" fill-opacity="0.85"/>
+<rect x="1085" y="123" width="9" height="13" rx="2.5" fill="#C2560A" fill-opacity="0.85"/>
+<path d="M380 334 L380 474" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="380,474 384.2,464.5 375.8,464.5" fill="#737C8B"/>
+<path d="M1090 334 L1090 414" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1090,414 1094.2,404.5 1085.8,404.5" fill="#737C8B"/>
+<path d="M562 526 L594 526" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="594,526 584.5,521.8 584.5,530.2" fill="#737C8B"/>
+<path d="M962 526 L994 526" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="994,526 984.5,521.8 984.5,530.2" fill="#737C8B"/>
+<path d="M700 574 L700 621 Q700 630 691 630 L389 630 Q380 630 380 639 L380 714" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="380,714 384.2,704.5 375.8,704.5" fill="#737C8B"/>
+<path d="M598 760 L566 760" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="566,760 575.5,764.2 575.5,755.8" fill="#737C8B"/>
+<path d="M1190 574 L1190 714" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1190,714 1194.2,704.5 1185.8,704.5" fill="#737C8B"/>
+<rect x="200" y="252" width="560" height="80" rx="10" fill="#FFFFFF"/>
+<rect x="200" y="252" width="560" height="80" rx="10" fill="#0284C7" fill-opacity="0.05"/>
+<rect x="200" y="252" width="560" height="80" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="200" y="252" width="560" height="80" rx="10" fill="none" stroke="#0284C7" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="224" y="280" fill="#0F172A">Web chat</text>
+<text class="bs" x="224" y="302" fill="#475569">streaming answers with source links</text>
+<text class="bs" x="224" y="318" fill="#475569">thumbs up / down feedback</text>
+<rect x="800" y="252" width="580" height="80" rx="10" fill="#FFFFFF"/>
+<rect x="800" y="252" width="580" height="80" rx="10" fill="#0284C7" fill-opacity="0.05"/>
+<rect x="800" y="252" width="580" height="80" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="800" y="252" width="580" height="80" rx="10" fill="none" stroke="#0284C7" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="824" y="280" fill="#0F172A">Slack bot</text>
+<text class="bs" x="824" y="302" fill="#475569">answers in thread · cites docs</text>
+<text class="bs" x="824" y="318" fill="#475569">same API as the web chat</text>
+<rect x="200" y="480" width="360" height="92" rx="10" fill="#FFFFFF"/>
+<rect x="200" y="480" width="360" height="92" rx="10" fill="#7C3AED" fill-opacity="0.05"/>
+<rect x="200" y="480" width="360" height="92" rx="10" fill="none" stroke="#7C3AED" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="224" y="508" fill="#0F172A">Query router</text>
+<text class="bs" x="224" y="530" fill="#475569">rewrite · split · skip retrieval</text>
+<text class="bn" x="224" y="554" fill="#6B7280">half the questions need no search</text>
+<rect x="600" y="480" width="360" height="92" rx="10" fill="#FFFFFF"/>
+<rect x="600" y="480" width="360" height="92" rx="10" fill="#7C3AED" fill-opacity="0.05"/>
+<rect x="600" y="480" width="360" height="92" rx="10" fill="none" stroke="#7C3AED" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="624" y="508" fill="#0F172A">Retriever</text>
+<text class="bs" x="624" y="530" fill="#475569">BM25 + vectors → rerank top 8</text>
+<text class="bn" x="624" y="554" fill="#6B7280">reranker fixes most bad answers</text>
+<rect x="1000" y="480" width="380" height="92" rx="10" fill="#FFFFFF"/>
+<rect x="1000" y="480" width="380" height="92" rx="10" fill="#E11D48" fill-opacity="0.05"/>
+<rect x="1000" y="480" width="380" height="92" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="1000" y="480" width="380" height="92" rx="10" fill="none" stroke="#E11D48" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="1024" y="508" fill="#0F172A">LLM API</text>
+<text class="bs" x="1024" y="530" fill="#475569">answer with citations</text>
+<text class="bn" x="1024" y="554" fill="#6B7280">provider is a config value</text>
+<rect x="200" y="720" width="360" height="80" rx="10" fill="#FFFFFF"/>
+<rect x="200" y="720" width="360" height="80" rx="10" fill="#C2560A" fill-opacity="0.05"/>
+<rect x="200" y="720" width="360" height="80" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="200" y="720" width="360" height="80" rx="10" fill="none" stroke="#C2560A" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="224" y="748" fill="#0F172A">Postgres + pgvector</text>
+<text class="bs" x="224" y="770" fill="#475569">chunks · embeddings · metadata</text>
+<rect x="600" y="720" width="360" height="80" rx="10" fill="#FFFFFF"/>
+<rect x="600" y="720" width="360" height="80" rx="10" fill="#C2560A" fill-opacity="0.05"/>
+<rect x="600" y="720" width="360" height="80" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="600" y="720" width="360" height="80" rx="10" fill="none" stroke="#C2560A" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="624" y="748" fill="#0F172A">Ingest job</text>
+<text class="bs" x="624" y="770" fill="#475569">nightly: docs · tickets · wiki</text>
+<rect x="1000" y="720" width="380" height="80" rx="10" fill="#FFFFFF"/>
+<rect x="1000" y="720" width="380" height="80" rx="10" fill="#C2560A" fill-opacity="0.05"/>
+<rect x="1000" y="720" width="380" height="80" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="1000" y="720" width="380" height="80" rx="10" fill="none" stroke="#C2560A" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="1024" y="748" fill="#0F172A">Eval logs</text>
+<text class="bs" x="1024" y="770" fill="#475569">question · sources · vote</text>
+<text class="al" x="394" y="390" fill="#5C6674">question</text>
+<text class="al" x="394" y="622" fill="#5C6674">top-k</text>
+<text class="al" x="1204" y="650" fill="#5C6674">answer + sources</text>
+</svg>

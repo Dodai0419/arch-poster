@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="1968" viewBox="0 0 1480 1968">
+<style>text{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',monospace}.title{font-size:28px;font-weight:700}.sub{font-size:14px;font-weight:400}.tag{font-size:13px;font-weight:400}.hdr{font-size:11px;font-weight:700;letter-spacing:2.5px}.tagr{font-size:10px;font-weight:400;letter-spacing:2px}.plane{font-size:9.5px;font-weight:700;letter-spacing:2px}.bl{font-size:13.5px;font-weight:600}.bs{font-size:11px;font-weight:400}.bn{font-size:10.5px;font-weight:400;font-style:italic}.al{font-size:10.5px;font-weight:400}.legend{font-size:11px;font-weight:400}</style>
+<rect width="1480" height="1968" fill="#F4F5F7"/>
+<rect x="160" y="200" width="1260" height="150" rx="14" fill="rgb(15,23,42)" fill-opacity="0.03" stroke="#64748B" stroke-width="1.5" stroke-opacity="0.55"/>
+<text class="hdr" x="184" y="230" fill="#64748B">PEOPLE — SHOPPERS · MERCHANTS · SUPPORT</text>
+<rect x="160" y="440" width="1260" height="184" rx="14" fill="rgb(15,23,42)" fill-opacity="0.03" stroke="#0284C7" stroke-width="1.5" stroke-opacity="0.45" stroke-dasharray="6 5"/>
+<text class="hdr" x="184" y="470" fill="#0284C7">PRODUCT SURFACES — NEXT.JS</text>
+<text class="tagr" x="1396" y="470" fill="#0284C7" text-anchor="end" opacity="0.6">OURS — WHAT USERS TOUCH</text>
+<rect x="160" y="710" width="1260" height="206" rx="14" fill="rgb(15,23,42)" fill-opacity="0.03" stroke="#7C3AED" stroke-width="1.5" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="hdr" x="184" y="740" fill="#7C3AED">CORE DOMAIN SERVICES</text>
+<text class="tagr" x="1396" y="740" fill="#7C3AED" text-anchor="end" opacity="0.6">OURS — THE BUSINESS LOGIC</text>
+<rect x="160" y="1000" width="1260" height="320" rx="14" fill="rgb(15,23,42)" fill-opacity="0.03" stroke="#C8CDD6" stroke-width="1.5"/>
+<text class="hdr" x="184" y="1030" fill="#64748B">PLATFORM SERVICES</text>
+<text class="tagr" x="1396" y="1030" fill="#64748B" text-anchor="end" opacity="0.7">OWNED ABSTRACTIONS OVER SWAPPABLE VENDORS</text>
+<rect x="160" y="1410" width="1260" height="404" rx="14" fill="rgb(15,23,42)" fill-opacity="0.03" stroke="#C2560A" stroke-width="1.5" stroke-opacity="0.4"/>
+<text class="hdr" x="184" y="1440" fill="#C2560A">INFRASTRUCTURE</text>
+<text class="tagr" x="1396" y="1440" fill="#C2560A" text-anchor="end" opacity="0.6">SWAPPABLE — EVERYTHING RUNS HERE</text>
+<text class="title" x="160" y="86" fill="#0F172A">Shoply — platform architecture</text>
+<text class="sub" x="160" y="118" fill="#475569">An e-commerce platform: browse → price → checkout → fulfil — every order event fans out on Kafka</text>
+<text class="tag" x="160" y="146" fill="#6B7280"><tspan fill="#0284C7">Storefront</tspan><tspan fill="#7B8593"> → checkout via </tspan><tspan fill="#7C3AED">Order Orchestrator</tspan><tspan fill="#7B8593"> → pays through </tspan><tspan fill="#E11D48">PaymentGateway</tspan><tspan fill="#7B8593"> · events fan out on </tspan><tspan fill="#C2560A">Kafka</tspan></text>
+<text class="legend" x="1082" y="86" fill="#475569">dashed — an abstraction we own</text>
+<text class="legend" x="1082" y="110" fill="#475569">solid — swappable vendors &amp; app surfaces</text>
+<text class="legend" x="1143" y="134" fill="#475569">colour — the plane it belongs to</text>
+<text class="plane" x="370" y="1064" fill="#0891B2" text-anchor="middle">SEARCH</text>
+<text class="plane" x="810" y="1064" fill="#E11D48" text-anchor="middle">PAYMENTS</text>
+<text class="plane" x="1220" y="1064" fill="#16A34A" text-anchor="middle">NOTIFICATIONS</text>
+<text class="bn" x="160" y="1894" fill="#6B7280">invariant: card data never touches our services — PaymentGateway exchanges tokens with Stripe &amp; Adyen</text>
+<text class="bn" x="160" y="1914" fill="#6B7280">every vendor sits behind an owned abstraction — PaymentGateway · SearchService · Notifier — swap Stripe for Adyen without touching checkout</text>
+<text class="bn" x="160" y="1934" fill="#6B7280">the feedback loop: order events → Kafka → analytics pipeline → the sales dashboard merchants act on</text>
+<rect x="1046" y="75" width="26" height="13" rx="3" fill="none" stroke="#737C8B" stroke-width="1.25" stroke-opacity="0.8" stroke-dasharray="6 5"/>
+<rect x="1046" y="99" width="26" height="13" rx="3" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="1046" y="123" width="9" height="13" rx="2.5" fill="#64748B" fill-opacity="0.85"/>
+<rect x="1059" y="123" width="9" height="13" rx="2.5" fill="#0284C7" fill-opacity="0.85"/>
+<rect x="1072" y="123" width="9" height="13" rx="2.5" fill="#7C3AED" fill-opacity="0.85"/>
+<rect x="1085" y="123" width="9" height="13" rx="2.5" fill="#0891B2" fill-opacity="0.85"/>
+<rect x="1098" y="123" width="9" height="13" rx="2.5" fill="#E11D48" fill-opacity="0.85"/>
+<rect x="1111" y="123" width="9" height="13" rx="2.5" fill="#16A34A" fill-opacity="0.85"/>
+<rect x="1124" y="123" width="9" height="13" rx="2.5" fill="#C2560A" fill-opacity="0.85"/>
+<path d="M370 332 L370 494" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="370,494 374.2,484.5 365.8,484.5" fill="#737C8B"/>
+<path d="M810 332 L810 494" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="810,494 814.2,484.5 805.8,484.5" fill="#737C8B"/>
+<path d="M1230 332 L1230 494" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1230,494 1234.2,484.5 1225.8,484.5" fill="#737C8B"/>
+<path d="M370 588 L370 764" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="370,764 374.2,754.5 365.8,754.5" fill="#737C8B"/>
+<path d="M520 588 L520 651 Q520 660 529 660 L631 660 Q640 660 640 669 L640 764" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="640,764 644.2,754.5 635.8,754.5" fill="#737C8B"/>
+<path d="M810 588 L810 764" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="810,764 814.2,754.5 805.8,754.5" fill="#737C8B"/>
+<path d="M1150 588 L1150 671 Q1150 680 1141 680 L959 680 Q950 680 950 689 L950 764" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="950,764 954.2,754.5 945.8,754.5" fill="#737C8B"/>
+<path d="M1032 825 L1074 825" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1074,825 1064.5,820.8 1064.5,829.2" fill="#737C8B"/>
+<path d="M810 880 L810 994" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="810,994 814.2,984.5 805.8,984.5" fill="#737C8B"/>
+<path d="M370 1176 L370 1152" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="370,1152 365.8,1161.5 374.2,1161.5" fill="#737C8B"/>
+<path d="M810 1176 L810 1152" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="810,1152 805.8,1161.5 814.2,1161.5" fill="#737C8B"/>
+<path d="M1220 1176 L1220 1152" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1220,1152 1215.8,1161.5 1224.2,1161.5" fill="#737C8B"/>
+<path d="M630 880 L630 1580" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="630,1580 634.2,1570.5 625.8,1570.5" fill="#737C8B"/>
+<path d="M1000 880 L1000 1361 Q1000 1370 991 1370 L909 1370 Q900 1370 900 1379 L900 1464" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="900,1464 904.2,1454.5 895.8,1454.5" fill="#737C8B"/>
+<path d="M565 1580 L565 1241 Q565 1232 556 1232 L546 1232" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="546,1232 555.5,1236.2 555.5,1227.8" fill="#737C8B"/>
+<path d="M1035 1580 L1035 1241 Q1035 1232 1044 1232 L1054 1232" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1054,1232 1044.5,1227.8 1044.5,1236.2" fill="#737C8B"/>
+<path d="M790 1668 L790 1688" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="790,1688 794.2,1678.5 785.8,1678.5" fill="#737C8B"/>
+<path d="M198 528 L125 528 Q116 528 116 537 L116 1223 Q116 1232 125 1232 L194 1232" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="194,1232 184.5,1227.8 184.5,1236.2" fill="#737C8B"/>
+<path d="M198 1736 L93 1736 Q84 1736 84 1727 L84 569 Q84 560 93 560 L154 560" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="154,560 144.5,555.8 144.5,564.2" fill="#737C8B"/>
+<path d="M1382 1232 L1427 1232 Q1436 1232 1436 1223 L1436 298 Q1436 292 1430 292 L1424 292" fill="none" stroke="#737C8B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1424,292 1433.5,296.2 1433.5,287.8" fill="#737C8B"/>
+<rect x="200" y="252" width="340" height="80" rx="10" fill="#FFFFFF"/>
+<rect x="200" y="252" width="340" height="80" rx="10" fill="#64748B" fill-opacity="0.05"/>
+<rect x="200" y="252" width="340" height="80" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="200" y="252" width="340" height="80" rx="10" fill="none" stroke="#64748B" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="224" y="280" fill="#0F172A">Shoppers</text>
+<text class="bs" x="224" y="302" fill="#475569">web storefront · mobile apps</text>
+<text class="bs" x="224" y="318" fill="#475569">browse · search · buy</text>
+<rect x="590" y="252" width="440" height="80" rx="10" fill="#FFFFFF"/>
+<rect x="590" y="252" width="440" height="80" rx="10" fill="#64748B" fill-opacity="0.05"/>
+<rect x="590" y="252" width="440" height="80" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="590" y="252" width="440" height="80" rx="10" fill="none" stroke="#64748B" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="614" y="280" fill="#0F172A">Merchants</text>
+<text class="bs" x="614" y="302" fill="#475569">run their stores from the dashboard</text>
+<text class="bs" x="614" y="318" fill="#475569">catalog · orders · promotions</text>
+<rect x="1080" y="252" width="300" height="80" rx="10" fill="#FFFFFF"/>
+<rect x="1080" y="252" width="300" height="80" rx="10" fill="#64748B" fill-opacity="0.05"/>
+<rect x="1080" y="252" width="300" height="80" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="1080" y="252" width="300" height="80" rx="10" fill="none" stroke="#64748B" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="1104" y="280" fill="#0F172A">Support agents</text>
+<text class="bs" x="1104" y="302" fill="#475569">refunds · disputes</text>
+<text class="bs" x="1104" y="318" fill="#475569">customer lookups</text>
+<rect x="200" y="500" width="340" height="88" rx="10" fill="#FFFFFF"/>
+<rect x="200" y="500" width="340" height="88" rx="10" fill="#0284C7" fill-opacity="0.05"/>
+<rect x="200" y="500" width="340" height="88" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="200" y="500" width="340" height="88" rx="10" fill="none" stroke="#0284C7" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="224" y="528" fill="#0F172A">Storefront</text>
+<text class="bs" x="224" y="550" fill="#475569">PLP · PDP · cart · checkout</text>
+<text class="bs" x="224" y="566" fill="#475569">talks to catalog · pricing · orders</text>
+<rect x="590" y="500" width="440" height="88" rx="10" fill="#FFFFFF"/>
+<rect x="590" y="500" width="440" height="88" rx="10" fill="#0284C7" fill-opacity="0.05"/>
+<rect x="590" y="500" width="440" height="88" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="590" y="500" width="440" height="88" rx="10" fill="none" stroke="#0284C7" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="614" y="528" fill="#0F172A">Merchant Dashboard</text>
+<text class="bs" x="614" y="550" fill="#475569">catalog mgmt · orders · promotions</text>
+<text class="bs" x="614" y="566" fill="#475569">sales dashboard — fed by analytics</text>
+<rect x="1080" y="500" width="300" height="88" rx="10" fill="#FFFFFF"/>
+<rect x="1080" y="500" width="300" height="88" rx="10" fill="#0284C7" fill-opacity="0.05"/>
+<rect x="1080" y="500" width="300" height="88" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="1080" y="500" width="300" height="88" rx="10" fill="none" stroke="#0284C7" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="1104" y="528" fill="#0F172A">Admin Console</text>
+<text class="bs" x="1104" y="550" fill="#475569">support tooling</text>
+<text class="bs" x="1104" y="566" fill="#475569">refunds · order overrides</text>
+<rect x="200" y="770" width="340" height="110" rx="10" fill="#FFFFFF"/>
+<rect x="200" y="770" width="340" height="110" rx="10" fill="#7C3AED" fill-opacity="0.05"/>
+<rect x="200" y="770" width="340" height="110" rx="10" fill="none" stroke="#7C3AED" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="224" y="798" fill="#0F172A">Catalog</text>
+<text class="bs" x="224" y="820" fill="#475569">products · variants · categories</text>
+<text class="bs" x="224" y="836" fill="#475569">inventory pointers per SKU</text>
+<text class="bn" x="224" y="858" fill="#6B7280">Postgres-backed · search index fed by events</text>
+<rect x="590" y="770" width="440" height="110" rx="10" fill="#FFFFFF"/>
+<rect x="590" y="770" width="440" height="110" rx="10" fill="#7C3AED" fill-opacity="0.05"/>
+<rect x="590" y="770" width="440" height="110" rx="10" fill="none" stroke="#7C3AED" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="614" y="798" fill="#0F172A">Order Orchestrator</text>
+<text class="bs" x="614" y="820" fill="#475569">saga-based checkout: cart → payment → fulfilment</text>
+<text class="bs" x="614" y="836" fill="#475569">compensating steps on failure · idempotent retries</text>
+<text class="bn" x="614" y="858" fill="#6B7280">every state change published to Kafka</text>
+<rect x="1080" y="770" width="300" height="110" rx="10" fill="#FFFFFF"/>
+<rect x="1080" y="770" width="300" height="110" rx="10" fill="#7C3AED" fill-opacity="0.05"/>
+<rect x="1080" y="770" width="300" height="110" rx="10" fill="none" stroke="#7C3AED" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="1104" y="798" fill="#0F172A">Pricing Engine</text>
+<text class="bs" x="1104" y="820" fill="#475569">promotions · discounts</text>
+<text class="bs" x="1104" y="836" fill="#475569">tax · currency conversion</text>
+<text class="bn" x="1104" y="858" fill="#6B7280">quoted on every cart view</text>
+<rect x="200" y="1080" width="340" height="68" rx="10" fill="#FFFFFF"/>
+<rect x="200" y="1080" width="340" height="68" rx="10" fill="#0891B2" fill-opacity="0.05"/>
+<rect x="200" y="1080" width="340" height="68" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="200" y="1080" width="340" height="68" rx="10" fill="none" stroke="#0891B2" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="224" y="1108" fill="#0F172A">Algolia</text>
+<text class="bs" x="224" y="1130" fill="#475569">hosted search &amp; discovery</text>
+<rect x="200" y="1180" width="340" height="104" rx="10" fill="#FFFFFF"/>
+<rect x="200" y="1180" width="340" height="104" rx="10" fill="#0891B2" fill-opacity="0.05"/>
+<rect x="200" y="1180" width="340" height="104" rx="10" fill="none" stroke="#0891B2" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="224" y="1206" fill="#0F172A">SearchService</text>
+<text class="bs" x="224" y="1228" fill="#475569">index the catalog · serve queries</text>
+<text class="bs" x="224" y="1244" fill="#475569">facets · typo-tolerance · ranking</text>
+<text class="bn" x="224" y="1266" fill="#6B7280">eventually consistent — fed by Kafka</text>
+<rect x="640" y="1080" width="340" height="68" rx="10" fill="#FFFFFF"/>
+<rect x="640" y="1080" width="340" height="68" rx="10" fill="#E11D48" fill-opacity="0.05"/>
+<rect x="640" y="1080" width="340" height="68" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="640" y="1080" width="340" height="68" rx="10" fill="none" stroke="#E11D48" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="664" y="1108" fill="#0F172A">Stripe · Adyen</text>
+<text class="bs" x="664" y="1130" fill="#475569">card processing · payouts</text>
+<rect x="640" y="1180" width="340" height="104" rx="10" fill="#FFFFFF"/>
+<rect x="640" y="1180" width="340" height="104" rx="10" fill="#E11D48" fill-opacity="0.05"/>
+<rect x="640" y="1180" width="340" height="104" rx="10" fill="none" stroke="#E11D48" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="664" y="1206" fill="#0F172A">PaymentGateway</text>
+<text class="bs" x="664" y="1228" fill="#475569">authorize · capture · refund</text>
+<text class="bs" x="664" y="1244" fill="#475569">vendor webhooks → saga steps</text>
+<text class="bn" x="664" y="1266" fill="#6B7280">card data never touches our services</text>
+<rect x="1060" y="1080" width="320" height="68" rx="10" fill="#FFFFFF"/>
+<rect x="1060" y="1080" width="320" height="68" rx="10" fill="#16A34A" fill-opacity="0.05"/>
+<rect x="1060" y="1080" width="320" height="68" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="1060" y="1080" width="320" height="68" rx="10" fill="none" stroke="#16A34A" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="1084" y="1108" fill="#0F172A">SendGrid · Twilio</text>
+<text class="bs" x="1084" y="1130" fill="#475569">email &amp; SMS delivery</text>
+<rect x="1060" y="1180" width="320" height="104" rx="10" fill="#FFFFFF"/>
+<rect x="1060" y="1180" width="320" height="104" rx="10" fill="#16A34A" fill-opacity="0.05"/>
+<rect x="1060" y="1180" width="320" height="104" rx="10" fill="none" stroke="#16A34A" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="1084" y="1206" fill="#0F172A">Notifier</text>
+<text class="bs" x="1084" y="1228" fill="#475569">templated email · SMS</text>
+<text class="bs" x="1084" y="1244" fill="#475569">receipts · shipping updates</text>
+<text class="bn" x="1084" y="1266" fill="#6B7280">driven by events, not direct calls</text>
+<rect x="200" y="1470" width="340" height="88" rx="10" fill="#FFFFFF"/>
+<rect x="200" y="1470" width="340" height="88" rx="10" fill="#C2560A" fill-opacity="0.05"/>
+<rect x="200" y="1470" width="340" height="88" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="200" y="1470" width="340" height="88" rx="10" fill="none" stroke="#C2560A" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="224" y="1498" fill="#0F172A">Redis</text>
+<text class="bs" x="224" y="1520" fill="#475569">carts · sessions</text>
+<text class="bs" x="224" y="1536" fill="#475569">read by storefront &amp; checkout</text>
+<rect x="640" y="1470" width="340" height="88" rx="10" fill="#FFFFFF"/>
+<rect x="640" y="1470" width="340" height="88" rx="10" fill="#C2560A" fill-opacity="0.05"/>
+<rect x="640" y="1470" width="340" height="88" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="640" y="1470" width="340" height="88" rx="10" fill="none" stroke="#C2560A" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="664" y="1498" fill="#0F172A">Postgres</text>
+<text class="bs" x="664" y="1520" fill="#475569">orders · catalog</text>
+<text class="bs" x="664" y="1536" fill="#475569">system of record</text>
+<rect x="1060" y="1470" width="320" height="88" rx="10" fill="#FFFFFF"/>
+<rect x="1060" y="1470" width="320" height="88" rx="10" fill="#C2560A" fill-opacity="0.05"/>
+<rect x="1060" y="1470" width="320" height="88" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="1060" y="1470" width="320" height="88" rx="10" fill="none" stroke="#C2560A" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="1084" y="1498" fill="#0F172A">Kubernetes</text>
+<text class="bs" x="1084" y="1520" fill="#475569">every service runs here</text>
+<text class="bs" x="1084" y="1536" fill="#475569">deploys · scaling</text>
+<rect x="200" y="1584" width="1180" height="84" rx="10" fill="#FFFFFF"/>
+<rect x="200" y="1584" width="1180" height="84" rx="10" fill="#C2560A" fill-opacity="0.05"/>
+<rect x="200" y="1584" width="1180" height="84" rx="10" fill="none" stroke="#D3D8E0" stroke-width="1.25"/>
+<rect x="200" y="1584" width="1180" height="84" rx="10" fill="none" stroke="#C2560A" stroke-width="1.25" stroke-opacity="0.42"/>
+<text class="bl" x="224" y="1612" fill="#0F172A">Kafka — event bus</text>
+<text class="bs" x="224" y="1634" fill="#475569">every order state change &amp; catalog update lands here — fan-out: search indexing · notifications · analytics</text>
+<text class="bn" x="224" y="1654" fill="#6B7280">consumers are independent — checkout never waits on email or reindexing</text>
+<rect x="200" y="1694" width="1180" height="84" rx="10" fill="#FFFFFF"/>
+<rect x="200" y="1694" width="1180" height="84" rx="10" fill="#C2560A" fill-opacity="0.05"/>
+<rect x="200" y="1694" width="1180" height="84" rx="10" fill="none" stroke="#C2560A" stroke-width="1.25" stroke-opacity="0.6" stroke-dasharray="6 5"/>
+<text class="bl" x="224" y="1722" fill="#0F172A">Analytics Pipeline</text>
+<text class="bs" x="224" y="1744" fill="#475569">consumes every order event → sales · conversion · inventory metrics</text>
+<text class="bn" x="224" y="1764" fill="#6B7280">feeds the sales dashboard merchants see — the feedback loop</text>
+<text class="al" x="384" y="420" fill="#5C6674">browse · cart · checkout</text>
+<text class="al" x="824" y="420" fill="#5C6674">manage store · read sales</text>
+<text class="al" x="1244" y="420" fill="#5C6674">assist · refund</text>
+<text class="al" x="384" y="688" fill="#5C6674">products · stock</text>
+<text class="al" x="536" y="652" fill="#5C6674">checkout</text>
+<text class="al" x="824" y="688" fill="#5C6674">orders · fulfilment</text>
+<text class="al" x="966" y="672" fill="#5C6674">refunds · overrides</text>
+<text class="al" x="1053" y="813" fill="#5C6674" text-anchor="middle">quote</text>
+<text class="al" x="824" y="952" fill="#5C6674">authorize · capture</text>
+<text class="al" x="824" y="1170" fill="#5C6674">tokens only</text>
+<text class="al" x="644" y="1364" fill="#5C6674">every order state change</text>
+<text class="al" x="1014" y="952" fill="#5C6674">orders — system of record</text>
+<text class="al" x="551" y="1424" fill="#5C6674" text-anchor="middle" transform="rotate(-90 551 1424)">reindex</text>
+<text class="al" x="1021" y="1424" fill="#5C6674" text-anchor="middle" transform="rotate(-90 1021 1424)">order events</text>
+<text class="al" x="100" y="880" fill="#5C6674" text-anchor="middle" transform="rotate(-90 100 880)">product search — queries</text>
+<text class="al" x="68" y="1148" fill="#5C6674" text-anchor="middle" transform="rotate(-90 68 1148)">sales metrics → merchant dashboard — the feedback loop</text>
+<text class="al" x="1452" y="762" fill="#5C6674" text-anchor="middle" transform="rotate(-90 1452 762)">email · SMS — receipts · shipping updates</text>
+</svg>
